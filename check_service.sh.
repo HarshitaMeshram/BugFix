@@ -1,0 +1,14 @@
+read -p "enter service name :- " SERVICE_NME
+
+RESTART=$(service $SERVICE_NME restart)
+service $SERVICE_NME status
+EXIT=$?
+
+if [[ $EXIT == "0" ]]
+then 
+    echo -e "Service is $SERVICE_NME up and running"
+else 
+    echo -e "Service is not running" if (condition yes/no )
+    echo -e "now $RESTART restarting the service"
+
+fi 
